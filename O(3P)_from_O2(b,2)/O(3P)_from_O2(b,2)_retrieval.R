@@ -2,7 +2,7 @@ data <- read.csv('science/data.csv', sep=';', check.names=F)
 constants <- read.csv('science//constants.csv', sep=';', check.names=F)
 
 GetValueWithError <- function(value, error) {
-  value * (1 + rnorm(1, sd=error))
+  value * (1 + rnorm(1, sd=error/2))
 }
 
 GetConstant <- function(name) {
