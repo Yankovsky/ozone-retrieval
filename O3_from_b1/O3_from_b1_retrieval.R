@@ -45,4 +45,4 @@ for (i in 1:nrow(data)) {
   }
 }
 colnames(result) <- c('height', 'size', 'mean', 'sd', 'variation', 'fraction')
-write.csv(result, file="science/O3_from_b1/results/result.csv")
+write.csv(result, file=paste("science/O3_from_b1/results/O3_from_b1_result_", gsub(' |:', '_', date()), ".csv", sep = ''))
